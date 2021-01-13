@@ -11,7 +11,8 @@ get_catalog_cpsbasic <-
 		
 		link_refs <- gsub( "http://" , "https://" , link_refs , fixed = TRUE )
 		
-		cps_table <- rvest::html_table( xml2::read_html( cps_ftp ) , fill = TRUE )[[2]]
+		# code breaks below - result is list() 
+		# cps_table <- rvest::html_table( xml2::read_html( cps_ftp ) , fill = TRUE )[[2]]
 		
 		basic_text <- link_text[ grep( "/basic/" , link_refs ) ]
 		
